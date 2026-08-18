@@ -9,5 +9,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f3f4f6;
+  background-color: #0a0a0a; /* Qorong'u fon */
+  color: #e5e5e5;
+}
+
+/* Shablon uchun kerakli ranglar va o'zgaruvchilar */
+:root {
+  --gold: oklch(0.82 0.13 80);
+  --primary-foreground: #0a0a0a;
+  --background: #0a0a0a;
+  --foreground: #e5e5e5;
+  --card: rgba(23, 23, 23, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
+  --muted-foreground: #a3a3a3;
+}
+
+.font-display { font-family: 'Cormorant Garamond', serif; }
+.font-arabic { font-family: 'Amiri', serif; }
+.gold-text { color: var(--gold); }
+
+/* Gullarni tushirish animatsiyasi */
+@keyframes petal-fall {
+  0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 1; }
+  50% { transform: translateY(50vh) rotate(180deg) translateX(30px); opacity: 0.8; }
+  100% { transform: translateY(110vh) rotate(360deg) translateX(-20px); opacity: 0; }
+}
+.petal { animation: petal-fall linear infinite; }
+
+/* Sahifa yo'naltirish animatsiyasi */
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulsing animatsiya */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 0; }
+}
+.pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+
+.shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0; }
 }
