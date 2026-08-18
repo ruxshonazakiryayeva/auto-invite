@@ -264,7 +264,7 @@ function Preview() {
               <p className="mt-8 gold-text font-display text-4xl italic md:text-5xl">{groomName} & {brideName}</p>
               <p className="mt-3 text-xs tracking-[0.4em] text-gray-500">{dateStr}</p>
             </div>
-          </section>
+          </Section>
           
           <footer className="relative border-t border-white/10 py-10 text-center text-xs tracking-widest text-gray-500">
             {!data?.is_active && (
