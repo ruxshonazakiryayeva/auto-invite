@@ -26,7 +26,7 @@ function App() {
       .from("v2_invitations")
       .insert([
         {
-          template_id: "00000000-0000-0000-0000-000000000000", // Vaqtincha bo'sh ID
+          template_id: null, // Hozircha shablon tanlanmagan
           user_data: formData,
           session_identifier: sessionId,
           preview_count: 0,
